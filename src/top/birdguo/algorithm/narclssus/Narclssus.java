@@ -3,7 +3,7 @@ package top.birdguo.algorithm.narclssus;
 public class Narclssus {
 
 	/**
-	 * ÅĞ¶ÏÒ»¸öÊıÊÇ·ñÎªË®ÏÉ»¨Êı
+	 * åˆ¤æ–­ä¸€ä¸ªæ•°æ˜¯å¦ä¸ºæ°´ä»™èŠ±æ•°
 	 * 
 	 * @param num
 	 * @return

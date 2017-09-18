@@ -5,28 +5,28 @@ import top.birdguo.algorithm.rabbitborn.RabbitBorn;
 public class Fibonacci {
 
 	/**
-	 * »ñµÃmaValueÒÔÄÚì³²¨ÄÇÆõÊıÁĞÖĞÎªÅ¼ÊıµÄÊıµÄºÍ
+	 * è·å¾—maValueä»¥å†…æ–æ³¢é‚£å¥‘æ•°åˆ—ä¸­ä¸ºå¶æ•°çš„æ•°çš„å’Œ
 	 * 
 	 * @param maxValue
-	 *            ×î´óÖµ
+	 *            æœ€å¤§å€¼
 	 * @return
 	 */
 	public static int getFeb(int maxValue) {
 
-		// Êı×éÏÂ±êÎª2¿ªÊ¼
+		// æ•°ç»„ä¸‹æ ‡ä¸º2å¼€å§‹
 		int n = 2;
-		// ·µ»ØÊıÖµ
+		// è¿”å›æ•°å€¼
 		int summarize = 0;
-		// µÚÒ»¸öÊı
+		// ç¬¬ä¸€ä¸ªæ•°
 		int feb = RabbitBorn.rabbitSolution(2);
-		while (feb < maxValue) {// ÅĞ¶ÏÊÇ·ñĞ¡ÓÚ4000000
+		while (feb < maxValue) {// åˆ¤æ–­æ˜¯å¦å°äº4000000
 			System.out.print(feb + " ");
-			if ((feb % 2) == 0) {// ÅĞ¶ÏÊÇ·ñÎªÅ¼Êı
-				summarize = summarize + feb;// ÇóºÍ
+			if ((feb % 2) == 0) {// åˆ¤æ–­æ˜¯å¦ä¸ºå¶æ•°
+				summarize = summarize + feb;// æ±‚å’Œ
 			}
 
 			n++;
-			// »ñµÃÏÂÒ»¸ö
+			// è·å¾—ä¸‹ä¸€ä¸ª
 			feb = RabbitBorn.rabbitSolution(n);
 		}
 		System.out.println();

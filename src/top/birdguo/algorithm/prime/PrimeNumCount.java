@@ -3,28 +3,28 @@ package top.birdguo.algorithm.prime;
 public class PrimeNumCount {
 
 	/**
-	 * ÅĞ¶ÏÒ»¸öÊıÊÇ·ñÎªËØÊı
+	 * åˆ¤æ–­ä¸€ä¸ªæ•°æ˜¯å¦ä¸ºç´ æ•°
 	 * 
 	 * @param num
-	 * @return true ÊÇËØÊı£»false ·ÇËØÊı
+	 * @return true æ˜¯ç´ æ•°ï¼›false éç´ æ•°
 	 */
 	public static boolean isPrime(int num) {
 
 		boolean isPrim = true;
 
 		switch (num) {
-		case 0:// 0²»ÊÇÖÊÊı
+		case 0:// 0ä¸æ˜¯è´¨æ•°
 			isPrim = false;
 			break;
-		case 1:// 1±¾Éí²»ÊÇÖÊÊı
+		case 1:// 1æœ¬èº«ä¸æ˜¯è´¨æ•°
 			isPrim = false;
 			break;
-		case 2:// 2ÊÇÖÊÊı
+		case 2:// 2æ˜¯è´¨æ•°
 			isPrim = true;
 			break;
 		default:
 
-			if (num % 2 == 0) {// È¥³ıÅ¼Êı
+			if (num % 2 == 0) {// å»é™¤å¶æ•°
 				isPrim = false;
 			} else {
 
@@ -43,7 +43,7 @@ public class PrimeNumCount {
 
 		return isPrim;
 
-	}
+}
 
 	public static void main(String[] args) {
 

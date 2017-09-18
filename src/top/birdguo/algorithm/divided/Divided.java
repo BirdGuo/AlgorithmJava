@@ -3,7 +3,7 @@ package top.birdguo.algorithm.divided;
 public class Divided {
 
 	/**
-	 * 最大公约数
+	 * 鑾峰彇鏈�澶у叕绾︽暟
 	 * 
 	 * @param a
 	 * @param b
@@ -20,7 +20,7 @@ public class Divided {
 	}
 
 	/**
-	 * 最小公倍数
+	 * 鑾峰彇鍏�嶆暟
 	 * 
 	 * @param a
 	 * @param b
