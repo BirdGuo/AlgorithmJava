@@ -43,7 +43,39 @@ public class PrimeNumCount {
 
 		return isPrim;
 
-}
+	}
+
+	/**
+	 * 判断一个数是否为素数
+	 * 
+	 * @param num
+	 * @return true 是素数；false 非素数
+	 */
+	public static boolean isPrime(Long num) {
+
+		boolean isPrim = true;
+
+		if (num <= 1) {
+			isPrim = false;
+		} else if (num == 2) {
+			isPrim = true;
+		} else {
+			if (num % 2 == 0) {// 去除偶数
+				isPrim = false;
+			} else {
+				for (int i = 2; i <= Math.sqrt(num); i++) {
+					if (num % i == 0) {
+						isPrim = false;
+						break;
+					}
+				}
+			}
+
+		}
+
+		return isPrim;
+
+	}
 
 	public static void main(String[] args) {
 
@@ -53,14 +85,14 @@ public class PrimeNumCount {
 		for (int i = 0; i < 100; i++) {
 			if (isPrime(i)) {
 				System.out.print(i + " ");
-				count ++;
+				count++;
 			}
 		}
 
 		System.out.println();
-		
+
 		System.out.println(count);
-		
+
 		Long b = System.currentTimeMillis();
 		System.out.println(b);
 		System.out.println("time:" + (b - a));
