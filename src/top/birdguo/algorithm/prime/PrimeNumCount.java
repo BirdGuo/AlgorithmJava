@@ -1,5 +1,7 @@
 package top.birdguo.algorithm.prime;
 
+import top.birdguo.algorithm.problem7.Problem7;
+
 public class PrimeNumCount {
 
 	/**
@@ -29,8 +31,7 @@ public class PrimeNumCount {
 			} else {
 
 				// System.out.println("-----------------------");
-				for (int i = 2; i <= Math.sqrt(num); i++) {
-					// System.out.println("tt:"+i);
+				for (int i = 3; i <= Math.sqrt(num); i += 2) {
 					if (num % i == 0) {
 						isPrim = false;
 						break;
@@ -59,11 +60,13 @@ public class PrimeNumCount {
 			isPrim = false;
 		} else if (num == 2) {
 			isPrim = true;
+		} else if (num == 3) {
+			isPrim = true;
 		} else {
 			if (num % 2 == 0) {// 去除偶数
 				isPrim = false;
 			} else {
-				for (int i = 2; i <= Math.sqrt(num); i++) {
+				for (int i = 3; i <= Math.sqrt(num); i += 2) {
 					if (num % i == 0) {
 						isPrim = false;
 						break;
@@ -82,20 +85,43 @@ public class PrimeNumCount {
 		Long a = System.currentTimeMillis();
 		System.out.println(a);
 		int count = 0;
-		for (int i = 0; i < 100; i++) {
+
+		// for (Long i = 3L; i < Long.MAX_VALUE; i++) {
+		// Long createPrime = Problem7.createPrime(i);
+		//
+		// if (createPrime < 101) {
+		//
+		// continue;
+		//
+		// } else if (createPrime < 201 && createPrime > 100) {
+		// System.out.print(createPrime+" ");
+		// count++;
+		// continue;
+		// }else {
+		// break;
+		// }
+		//
+		// }
+
+		Long c = System.currentTimeMillis();
+		System.out.println();
+		System.out.println("time1:" + (c - a));
+		System.out.println(count);
+
+		int count1 = 0;
+		for (int i = 101; i < 201; i++) {
 			if (isPrime(i)) {
 				System.out.print(i + " ");
-				count++;
+				count1++;
 			}
 		}
 
 		System.out.println();
 
-		System.out.println(count);
+		System.out.println(count1);
 
 		Long b = System.currentTimeMillis();
-		System.out.println(b);
-		System.out.println("time:" + (b - a));
+		System.out.println("time2:" + (b - a));
 
 	}
 
