@@ -69,17 +69,21 @@ public class Problem7 {
 
 	}
 
+	// public static Long name() {
+	//
+	// }
+
 	public static void main(String[] args) {
 
 		long begin = System.currentTimeMillis();
 		// ArrayList<Long> createPrime = createPrime(2000000L);
 
-		boolean[] primes = isPrime(100000000);
-		for (int i = 0; i < primes.length; i++) {
-			if (primes[i]) {
-				System.out.println(i);
-			}
-		}
+		boolean[] primes = isPrime(1000000000);
+		// for (int i = 0; i < primes.length; i++) {
+		// if (primes[i]) {
+		// System.out.println(i);
+		// }
+		// }
 
 		long end = System.currentTimeMillis();
 		System.out.println();
