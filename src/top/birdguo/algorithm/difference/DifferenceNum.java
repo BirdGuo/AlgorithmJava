@@ -10,15 +10,19 @@ public class DifferenceNum {
 
 		Long sum = ((1 + num) * num) / 2;
 		resultSumSqure = (long) Math.pow(sum, 2);
-		
+
 		for (int i = 1; i <= num; i++) {
-//			resultSqure = resultdiffSqure+i
+			resultSqure = (long) (resultSqure + Math.pow(i, 2));
 		}
+
+		resultdiffSqure = resultSumSqure - resultSqure;
 
 		return resultdiffSqure;
 	}
 
 	public static void main(String[] args) {
+
+		System.out.println(diference(100L));
 
 	}
 
