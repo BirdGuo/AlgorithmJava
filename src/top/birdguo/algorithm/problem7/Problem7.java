@@ -1,93 +1,92 @@
 package top.birdguo.algorithm.problem7;
 
-import java.util.ArrayList;
-
 import top.birdguo.algorithm.prime.PrimeNumCount;
 
 public class Problem7 {
 
-	public static ArrayList<Long> createPrime(Long location) {
+	/**
+	 * 生成第location位素数
+	 * 
+	 * 生成1000001L需要 16609 毫秒，结果15485867
+	 * 
+	 * @param location
+	 * @return
+	 */
+	public static Long createPrimeWithLocation1(Long location) {
 
-		Long prime = 0L;
+		Long num = 0L;
 
-		ArrayList<Long> primes = new ArrayList<Long>();
+		if (location.equals(2)) {
+			return 2L;
+		} else if (location.equals(3)) {
+			return 3L;
+		} else {
 
-		primes.add(2L);
-		primes.add(3L);
-
-		for (Long i = 3L; i < Long.MAX_VALUE; i++) {
-
-			if (primes.size() >= location) {
-				break;
-			}
+			Long count = 3L;
 
 			Long primeLoc = 0L;
-			if (i % 2 == 0) {
-				primeLoc = (6 * ((i / 2) - 1) + 1);
-			} else {
-				primeLoc = (6 * (((i + 1) / 2) - 1) - 1);
+			for (Long i = 3L; i < Long.MAX_VALUE; i++) {
+				if (count <= location) {
+					if (i % 2 == 0) {// 第偶数位素数 6n+1
+						primeLoc = (6 * ((i / 2) - 1) + 1);
+					} else {// 第奇数位素数 6n-1
+						primeLoc = (6 * (((i + 1) / 2) - 1) - 1);
+					}
+					if (PrimeNumCount.isPrime(primeLoc)) {
+						count++;
+					}
+				} else {
+					break;
+				}
+
 			}
-			if (PrimeNumCount.isPrime(primeLoc)) {
-				// System.out.println(primes.size() + " " + i + " " + primeLoc);
-				primes.add(primeLoc);
-			}
+
+			return primeLoc;
 
 		}
 
-		return primes;
 	}
 
 	/**
-	 * 筛选法
+	 * 生成第n个素数
 	 * 
-	 * @param maxNum
+	 * 生成1000001L需要17177毫秒 结果15485919
+	 * 
+	 * @param location
 	 * @return
 	 */
-	public static boolean[] isPrime(int maxNum) {
+	public static Long createPrimeWithLocation(Long location) {
 
-		boolean[] primes = new boolean[maxNum + 1];
+		Long count = 2L;
 
-		for (int i = 0; i < primes.length; i += 2) {
-			primes[i] = false;
+		Long num = 3L;
+		if (location.equals(1L)) {
+			num = 2L;// 第1个直接输出为2
+		} else if (location.equals(2L)) {
+			num = 3L;// 第2个直接输出为3
+		} else {
+
+			// 当前个数小于location时
+			while (count < location) {
+				// 判断是否为素数
+				num += 2;// 因为是从3开始，而且偶数不为素数，所以移动量为2
+				if (PrimeNumCount.isPrime(num)) {
+					count++;// 是素数位数+1
+				}
+			}
 		}
 
-		for (int i = 1; i < primes.length; i += 2) {
-			primes[i] = true;
-		}
-
-		primes[1] = false;
-
-		for (int i = 3; i <= Math.sqrt(maxNum); i += 2) {
-			if (primes[i])
-				for (int j = i + i; j <= maxNum; j += i)
-					primes[j] = false;
-		}
-
-		primes[2] = true;
-
-		return primes;
-
+		// 返回结果
+		return num;
 	}
-
-	// public static Long name() {
-	//
-	// }
 
 	public static void main(String[] args) {
 
 		long begin = System.currentTimeMillis();
-		// ArrayList<Long> createPrime = createPrime(2000000L);
 
-		boolean[] primes = isPrime(1000000000);
-		// for (int i = 0; i < primes.length; i++) {
-		// if (primes[i]) {
-		// System.out.println(i);
-		// }
-		// }
+		System.out.println(createPrimeWithLocation(1000001L));
 
 		long end = System.currentTimeMillis();
-		System.out.println();
-		// System.out.println(createPrime.get(createPrime.size() - 1));
 		System.out.println((end - begin));
 	}
 
