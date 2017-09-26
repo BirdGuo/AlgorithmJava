@@ -13,3 +13,4 @@ How many such routes are there through a 20×20 grid?
 ## 分析
 数了半天，网上查了点资料，发现居然是杨辉三角
 
+又找了几天，杨辉三角第n行第m个数居然是组合数 C(n-1,m-1)
