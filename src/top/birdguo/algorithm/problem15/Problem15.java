@@ -18,7 +18,7 @@ public class Problem15 {
 
 	public static void main(String[] args) {
 
-		System.out.println(latticePath(18, 18));
+		System.out.println(latticePath(5, 5));
 
 	}
 

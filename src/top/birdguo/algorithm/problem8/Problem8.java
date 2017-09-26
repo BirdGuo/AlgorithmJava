@@ -1,12 +1,9 @@
 package top.birdguo.algorithm.problem8;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map.Entry;
 
 public class Problem8 {
 
