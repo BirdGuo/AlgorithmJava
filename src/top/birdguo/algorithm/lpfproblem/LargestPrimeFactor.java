@@ -20,8 +20,8 @@ public class LargestPrimeFactor {
 					if (num % i == 0) {
 						primes.add(i);
 						num = num / i;
-						System.out.println("solvePrimes i:" + i);
-						System.out.println("solvePrimes num:" + num);
+//						System.out.println("solvePrimes i:" + i);
+//						System.out.println("solvePrimes num:" + num);
 						i = 2L;
 					}
 				}

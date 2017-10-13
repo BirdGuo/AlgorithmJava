@@ -18,7 +18,7 @@ public class Mult3And5 {
 
 	public static void main(String[] args) {
 
-		System.out.println(getMult3and5(10));
+		System.out.println(getMult3and5(1000));
 
 	}
 
