@@ -9,7 +9,7 @@ public class Divided {
 	 * @param b
 	 * @return
 	 */
-	private static int getMaxDivisor(int a, int b) {
+	public static int getMaxDivisor(int a, int b) {
 		int m = a % b;
 		while (m != 0) {
 			a = b;
@@ -26,7 +26,7 @@ public class Divided {
 	 * @param b
 	 * @return
 	 */
-	private static int getMinMult(int a, int b) {
+	public static int getMinMult(int a, int b) {
 
 		int maxMult = getMaxDivisor(a, b);
 		return ((a * b) / maxMult);
