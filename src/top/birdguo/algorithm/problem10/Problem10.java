@@ -10,6 +10,22 @@ public class Problem10 {
 	 */
 	public static Long createPrimeWithMax(int maxNum) {
 
+		boolean[] createPrime = createPrime(maxNum);
+		Long result = 0L;
+		for (int i = 0; i < createPrime.length; i++) {
+
+			if (createPrime[i]) {
+				result += i;
+			}
+
+		}
+
+		return result;
+
+	}
+
+	public static boolean[] createPrime(int maxNum) {
+
 		boolean[] primes = new boolean[maxNum + 1];
 
 		for (int i = 0; i < primes.length; i += 2) {
@@ -30,16 +46,7 @@ public class Problem10 {
 
 		primes[2] = true;
 
-		Long result = 0L;
-		for (int i = 0; i < primes.length; i++) {
-
-			if (primes[i]) {
-				result += i;
-			}
-
-		}
-
-		return result;
+		return primes;
 
 	}
 

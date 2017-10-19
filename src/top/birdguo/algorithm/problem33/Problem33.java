@@ -8,10 +8,10 @@ public class Problem33 {
 
 		// System.out.println((double) 1 / 3);
 
-		// solution();
+		solution();
 
-		int maxDivisor = Divided.getMaxDivisor(1, 3);
-		System.out.println("maxDivisor：" + maxDivisor);
+		// int maxDivisor = Divided.getMaxDivisor(1, 3);
+		// System.out.println("maxDivisor：" + maxDivisor);
 
 	}
 
@@ -20,6 +20,7 @@ public class Problem33 {
 		// 这4个分数为：16/64=1/4；26/65=2/5；19/95=1/5；49/98=4/8.
 		// i<j<k 10*a+c/10*c+b a<b<c
 		int num = 1;
+		int beichuNum = 1;
 		for (int i = 1; i < 9; i++) {
 			for (int j = i + 1; j < 10; j++) {
 				for (int k = j + 1; k < 10; k++) {
@@ -29,15 +30,16 @@ public class Problem33 {
 					double resultNew = (double) i / j;
 
 					if (result == resultNew) {
-
-						// System.out.println(x + "/" + y + " = " + i + "/" + j);
-						
+						num = num * i;
+						beichuNum = beichuNum * j;
 					}
 
 				}
 
 			}
 		}
+		int maxDivisor = Divided.getMaxDivisor(num, beichuNum);
+		System.out.println(beichuNum / maxDivisor);
 
 	}
 
