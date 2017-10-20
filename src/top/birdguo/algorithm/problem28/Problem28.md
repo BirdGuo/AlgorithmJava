@@ -7,7 +7,7 @@ Starting with the number 1 and moving to the right in a clockwise direction a 5 
 19  6  1  2 11
 18  5  4  3 12
 17 16 15 14 13
-It can be verified that the sum of the numbers on the diagonals is 101.
+It can be verified that the sum of the numbekrs on the diagonals is 101.
 
 What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed in the same way?
 
