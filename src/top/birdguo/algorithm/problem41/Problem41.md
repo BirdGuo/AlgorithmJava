@@ -12,3 +12,4 @@ What is the largest n-digit pandigital prime that exists?
 
 ## 分析
 1. 从987654321
+2. 开头为9,从8开始全组合
