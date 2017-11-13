@@ -1,9 +1,10 @@
-//package top.birdguo.algorithm.problem43;
+package top.birdguo.algorithm.problem43;
 
 import java.util.ArrayList;
 
-//import top.birdguo.algorithm.prime.PrimeNumCount;
+import top.birdguo.algorithm.problem41.Problem41;
 
+//import top.birdguo.algorithm.prime.PrimeNumCount;
 
 public class Problem43 {
 
@@ -16,7 +17,9 @@ public class Problem43 {
 		char[] chs = { '9', '8', '7', '6', '5', '4', '3', '2', '1', '0' };
 		ArrayList<String> nums = new ArrayList<String>();
 
-//		Problem41.permutation(chs, 0, nums);
+		Problem41.permutation(chs, 0, nums);
+
+		System.out.println("nums size:" + nums.size());
 
 		Long result = 0L;
 		for (String num : nums) {
@@ -28,23 +31,15 @@ public class Problem43 {
 			String sub6 = num.substring(6, 9);
 			String sub7 = num.substring(7, 10);
 
-			System.out.println(sub1+"   "+sub2);
+//			System.out.println(sub1 + "   " + sub2);
 
-//			if (!PrimeNumCount.isPrime(Integer.valueOf(sub1)) && !PrimeNumCount.isPrime(Integer.valueOf(sub2))
-//					&& !PrimeNumCount.isPrime(Integer.valueOf(sub3)) && !PrimeNumCount.isPrime(Integer.valueOf(sub4))
-//					&& !PrimeNumCount.isPrime(Integer.valueOf(sub5)) && !PrimeNumCount.isPrime(Integer.valueOf(sub6))
-//					&& !PrimeNumCount.isPrime(Integer.valueOf(sub7))) {
-				// System.out.println(num + " ");
-//				result = result + Long.valueOf(num);
-//			}
+			if (((Integer.valueOf(sub1)) % 2 == 0) && ((Integer.valueOf(sub2)) % 3 == 0)
+					&& ((Integer.valueOf(sub3)) % 5 == 0) && ((Integer.valueOf(sub4)) % 7 == 0)
+					&& ((Integer.valueOf(sub5)) % 11 == 0) && ((Integer.valueOf(sub6)) % 13 == 0)
+					&& ((Integer.valueOf(sub7)) % 17 == 0)) {
 
-			if(((Integer.valueOf(sub1))%2==0)
-				&&((Integer.valueOf(sub2))%3==0)&&((Integer.valueOf(sub3))%5==0)
-				&&((Integer.valueOf(sub4))%7==0)&&((Integer.valueOf(sub5))%11==0)
-				&&((Integer.valueOf(sub6))%13==0)&&((Integer.valueOf(sub7))%17==0)){
-				
 				System.out.println(num + " ");
-				result = result + Long.valueOf(num);			
+				result = result + Long.valueOf(num);
 			}
 
 		}
