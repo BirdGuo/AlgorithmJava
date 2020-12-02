@@ -20,7 +20,7 @@ public class Fibonacci {
 		// 第一个数
 		int feb = RabbitBorn.rabbitSolution(2);
 		while (feb < maxValue) {// 判断是否小于4000000
-			System.out.print(feb + " ");
+			System.out.println(feb + " ");
 			if ((feb % 2) == 0) {// 判断是否为偶数
 				summarize = summarize + feb;// 求和
 			}
@@ -29,7 +29,7 @@ public class Fibonacci {
 			// 获得下一个
 			feb = RabbitBorn.rabbitSolution(n);
 		}
-		System.out.println();
+		System.out.println("=============");
 
 		return summarize;
 	}

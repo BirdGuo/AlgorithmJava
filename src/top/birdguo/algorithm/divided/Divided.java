@@ -35,7 +35,7 @@ public class Divided {
 
 	public static void main(String[] args) {
 		int a = 1;
-		for (int i = 1; i < 21; i++) {
+		for (int i = 1; i < 20; i++) {
 			a = getMinMult(a, i);
 		}
 		System.out.println(a);

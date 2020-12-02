@@ -9,6 +9,8 @@ public class PrimeNumCount {
 	 * 
 	 * @param num
 	 * @return true 是素数；false 非素数
+	 *
+	 * 大于3的偶数都不是质数
 	 */
 	public static boolean isPrime(int num) {
 
@@ -51,6 +53,8 @@ public class PrimeNumCount {
 	 * 
 	 * @param num
 	 * @return true 是素数；false 非素数
+	 *
+	 * 大于3的偶数都不是质数
 	 */
 	public static boolean isPrime(Long num) {
 

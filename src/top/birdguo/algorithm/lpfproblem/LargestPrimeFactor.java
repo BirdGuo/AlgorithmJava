@@ -34,6 +34,10 @@ public class LargestPrimeFactor {
 
 	public static void main(String[] args) {
 		ArrayList<Long> solvePrimes = solvePrimes(600851475143L);
+
+//		double sqrt = Math.sqrt(600851475143L);
+//		System.out.println("sqrt="+sqrt);
+
 		for (Long long1 : solvePrimes) {
 			System.out.print("m:" + long1 + "   ");
 		}

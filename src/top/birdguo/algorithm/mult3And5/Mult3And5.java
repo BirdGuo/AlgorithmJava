@@ -2,6 +2,12 @@ package top.birdguo.algorithm.mult3And5;
 
 public class Mult3And5 {
 
+	/**
+	 * birdguo
+	 * 783gxw&8933wxj
+	 * @param maxNum
+	 * @return
+	 */
 	public static int getMult3and5(int maxNum) {
 
 		int a = 0;
