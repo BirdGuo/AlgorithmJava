@@ -9,8 +9,8 @@ public class Divided {
 	 * @param b
 	 * @return
 	 */
-	public static int getMaxDivisor(int a, int b) {
-		int m = a % b;
+	public static Long getMaxDivisor(Long a, Long b) {
+		Long m = a % b;
 		while (m != 0) {
 			a = b;
 			b = m;
@@ -20,34 +20,26 @@ public class Divided {
 	}
 
 	/**
-	 * 获取公倍数
-	 * 
+	 * 获取最小公倍数
+	 * 比如 6与8，最大公约数为2，最小公倍数为（6/2）*8 = 24 化简得 6*8/2 = 24
 	 * @param a
 	 * @param b
 	 * @return
 	 */
-	public static int getMinMult(int a, int b) {
+	public static Long getMinMult(Long a, Long b) {
 
-		int maxMult = getMaxDivisor(a, b);
+		Long maxMult = getMaxDivisor(a, b);
 		return ((a * b) / maxMult);
 
 	}
 
-	/**
-	 * 首先获取两个数的最大公约数，比如 6与8，最大公约数为2，最小公倍数为（6/2）*8 = 24
-	 * 问题再
-	 */
-	public static void dividedNum(){}
-
 	public static void main(String[] args) {
-		int a = 1;
-		for (int i = 1; i < 21; i++) {
-
-			System.out.println("===i="+i);
-
+		Long a = 1L;
+		for (Long i = 1L; i < 21; i++) {
 			a = getMinMult(a, i);
 		}
 		System.out.println(a);
+
 	}
 
 }

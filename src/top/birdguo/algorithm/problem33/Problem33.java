@@ -38,8 +38,8 @@ public class Problem33 {
 
 			}
 		}
-		int maxDivisor = Divided.getMaxDivisor(num, beichuNum);
-		System.out.println(beichuNum / maxDivisor);
+//		int maxDivisor = Divided.getMaxDivisor(num, beichuNum);
+//		System.out.println(beichuNum / maxDivisor);
 
 	}
 

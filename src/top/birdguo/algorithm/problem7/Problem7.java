@@ -84,7 +84,7 @@ public class Problem7 {
 
 		long begin = System.currentTimeMillis();
 
-		System.out.println(createPrimeWithLocation(1000001L));
+		System.out.println(createPrimeWithLocation1(10001L));
 
 		long end = System.currentTimeMillis();
 		System.out.println((end - begin));
