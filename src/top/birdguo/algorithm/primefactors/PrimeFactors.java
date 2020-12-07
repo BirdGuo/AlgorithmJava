@@ -52,14 +52,17 @@ public class PrimeFactors {
 
 		Long begin = System.currentTimeMillis();
 
-		for (int i = 1; i < 1000; i++) {
+		for (int i = 1; i < 100; i++) {
 
 			// System.out.println(getPrimeFactors(i));
 
+			StringBuffer result = new StringBuffer();
 			for (Integer a : getPrimeFactors(i)) {
-				System.out.print(a + " ");
+
+				result.append("*"+a);
+//				System.out.print("PPP->"+i+" = "+a + " ");
 			}
-			System.out.println();
+			System.out.println("result ==> "+i+" = "+result);
 
 		}
 
